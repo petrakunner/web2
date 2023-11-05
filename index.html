@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- For Neuee Haas Grotesk font from Adobe Typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/ckn8ylz.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
+    />
+    <!-- GLIDEJS Required Core Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css"
+      integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css"
+      integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <title>Kin</title>
+  </head>
+  <body>
+    <!-- Menu -->
+    <nav>
+      <div class="navigation-links">
+        <ul class="menu">
+          <li>
+            <a class="shop" href="#shop-all">SHOP ALL</a>
+          </li>
+          <li>
+            <a class="learn" href="">LEARN</a>
+          </li>
+          <li>
+            <a class="subscribe" href="#subscribe">SUBSCRIBE</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobile-navigation">
+        <!-- https://shoelace.style/components/dropdown -->
+        <sl-dropdown>
+          <sl-icon-button name="list" slot="trigger"> </sl-icon-button>
+          <sl-menu>
+            <sl-menu-item>
+              <a class="shop" href="#shop-all">SHOP ALL</a>
+            </sl-menu-item>
+            <sl-menu-item>
+              <a class="learn" href="">LEARN</a>
+            </sl-menu-item>
+            <sl-menu-item>
+              <a class="subscribe" href="#subscribe">SUBSCRIBE</a>
+            </sl-menu-item>
+            <sl-menu-item>
+              <a href="#cart"
+                ><img src="images/shopping-cart.svg" alt="shopping cart" />
+                CART</a
+              >
+            </sl-menu-item>
+            <sl-menu-item>
+              <a href="#user"
+                ><img src="images/user-circle.svg" alt="profile" /> PROFILE</a
+              >
+            </sl-menu-item>
+          </sl-menu>
+        </sl-dropdown>
+      </div>
+      <div class="logo">
+        <img src="images/logo.png" alt="Kin Logo" />
+      </div>
+      <div class="cart_profile">
+        <div class="icons">
+          <a href="#cart"
+            ><img src="images/shopping-cart.svg" alt="shopping cart"
+          /></a>
+          <a href="#user"><img src="images/user-circle.svg" alt="profile" /></a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- the can needs to be above every element -->
+      <div class="kin-can">
+        <img src="images/KIN_Can.png" alt="" />
+      </div>
+      <div class="background-gradient"></div>
+      <section class="intro">
+        <div class="kin-can-mobile">
+          <img src="images/KIN_Can.png" alt="" />
+        </div>
+        <div class="intro-bg"></div>
+        <div class="cta z-index-1">
+          <h1>Feel-good revelry</h1>
+          <a href="#shop-all" class="button">SHOP NOW</a>
+        </div>
+      </section>
+      <section class="description z-index-1">
+        <div class="description-left">
+          <h2>A REVOLUTION OF FEEL-GOOD REVELRY</h2>
+          <p>
+            Kin Euphorics is a non-alcoholic, functional beverage, designed
+            using ingredients that nourish mind and body. Adaptogens to help you
+            manage stress; nootropics to support brain cognition; and
+            spirit-centering botanics to elevate taste.
+          </p>
+        </div>
+        <div class="description-right">
+          <p>
+            Carefully layering these energy-transforming ingredients help tune
+            your mood and activate the power, energy, and peace that is already
+            in you. Euphorics was born from the minds of spirited creators,
+            fearless mixologists, and lifelong learners. Individuals devoted to
+            the betterment of all kind.
+          </p>
+        </div>
+      </section>
+      <div id="information" class="information z-index-1">
+        <div class="cloud-left"><img src="images/cloud_left.png" alt="" /></div>
+        <div class="flower-left"><img src="images/flower_left.png" alt="" /></div>
+        <div class="center-shape"></div>
+        <div class="botanicals">
+          <div>
+            <p>BOTANICALS</p>
+            <p>
+              Botanical ingredients offer health benefits, including natural
+              remedies, enhanced nutrition, and holistic wellness support.
+            </p>
+          </div>
+          <!-- include the botanicals wheat svg -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="122"
+            height="122"
+            fill="none"
+            viewBox="0 0 122 122"
+          >
+            <g fill="#8D1C02" clip-path="url(#a)">
+              <path
+                d="M37.702 82.89c.459.319.602.93.339 1.422a116.444 116.444 0 0 0-4.339 9.012 1.117 1.117 0 0 1-2.052-.882 117.283 117.283 0 0 1 4.431-9.19c.295-.55 1.018-.782 1.621-.362ZM65.544 50.258c-.617.532-1.229 1.068-1.834 1.61a1.086 1.086 0 0 1-.748.28 1.1 1.1 0 0 1-.753-1.921c.62-.556 1.247-1.107 1.88-1.653a1.101 1.101 0 0 1 1.603.176 1.097 1.097 0 0 1-.148 1.508ZM43.973 69.582a.49.49 0 0 1-.283.492 13.5 13.5 0 0 0-5.366 4.524c-1.709 2.449-2.235 3.157-2.465 3.611a.482.482 0 0 1-.707.176 11.337 11.337 0 0 1-2.823-15.809l.551-.79a3.955 3.955 0 0 1 5.511-.979l.897.627a11.323 11.323 0 0 1 4.685 8.148ZM59.693 52.119a.51.51 0 0 1-.385.446 13.521 13.521 0 0 0-6.111 3.438c-2.964 2.889-2.854 2.76-3.072 3.053a.504.504 0 0 1-.767.057c-4.378-4.487-4.288-11.665.201-16.044l.69-.671a3.963 3.963 0 0 1 5.597.07l.671.69a11.288 11.288 0 0 1 3.176 8.96ZM76.086 38.508a.49.49 0 0 1-.412.39c-4.076.59-6.184 2.587-8.553 4.463-.606.48-.98.745-1.28 1.072a.485.485 0 0 1-.752-.042c-3.903-4.925-3.057-12.05 1.848-15.937l.755-.598a3.955 3.955 0 0 1 5.56.645l.597.754a11.296 11.296 0 0 1 2.237 9.253ZM57.72 79.133l-.55.789c-3.57 5.112-10.653 6.4-15.797 2.805l-3.118-2.177a1.116 1.116 0 0 1-.277-1.555l2.178-3.118c3.581-5.13 10.668-6.388 15.796-2.806l.79.55a3.964 3.964 0 0 1 .979 5.512ZM86.505 51.605l-.755.599c-4.904 3.883-12.052 3.054-15.938-1.85l-2.361-2.981a1.117 1.117 0 0 1 .183-1.57l2.98-2.36c4.913-3.893 12.045-3.068 15.938 1.849l.598.753a3.956 3.956 0 0 1-.645 5.56ZM71.47 58.493a3.961 3.961 0 0 1-.07 5.596l-.689.673c-4.456 4.345-11.64 4.313-16.042-.203l-2.656-2.723a1.117 1.117 0 0 1 .02-1.578l2.723-2.657a11.34 11.34 0 0 1 16.043.203l.672.69ZM50.839 65.241c-.89 1.078-1.758 2.17-2.606 3.275a1.085 1.085 0 0 1-.705.416 1.096 1.096 0 0 1-1.07-1.746 118.58 118.58 0 0 1 2.675-3.365 1.094 1.094 0 0 1 1.626-.069c.436.445.422 1.074.08 1.49ZM90.685 32.56c-.103.519-.064 5.034-4.188 8.4a1.11 1.11 0 0 1-1.316.064 13.55 13.55 0 0 0-5.757-2.154 1.112 1.112 0 0 1-.964-1.213 13.597 13.597 0 0 0-.774-6.086 1.111 1.111 0 0 1 .36-1.262c4.189-3.243 8.648-2.176 9.145-2.162.03 0 .062.004.092.008a3.957 3.957 0 0 1 3.415 4.306.937.937 0 0 1-.013.098Z"
+              />
+            </g>
+            <circle cx="61" cy="61" r="59" stroke="#8D1C02" stroke-width="4" />
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M27 27h67v67H27z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="nootropics">
+          <!-- this svg has something wrong with it, so I am just using an <img> tag -->
+          <img src="images/molecule.svg" alt="" />
+          <div>
+            <p>NOOTROPICS</p>
+            <p>
+              Improve cognitive function, memory, focus, and mood, enhancing
+              mental performance.
+            </p>
+          </div>
+        </div>
+        <div class="adaptogens">
+          <!-- include the mortar svg -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="122"
+            height="122"
+            fill="none"
+            viewBox="0 0 122 122"
+          >
+            <circle cx="61" cy="61" r="59" stroke="#8D1C02" stroke-width="4" />
+            <path
+              fill="#8D1C02"
+              d="M88.344 30.977a9.286 9.286 0 0 0-13.125 11.746L65.124 57.72h14.973l4.66-9.461a9.297 9.297 0 0 0 3.587-17.282ZM88.344 59.906h-57.97A1.094 1.094 0 0 0 29.282 61v3.281a1.093 1.093 0 0 0 .81 1.094l4.659 1.236v2.187a18.496 18.496 0 0 0 14.087 17.905l-.962 4.703a1.095 1.095 0 0 0 1.094 1.313h26.25a1.095 1.095 0 0 0 1.093-1.313l-.94-4.703a18.495 18.495 0 0 0 14.065-17.926V61a1.094 1.094 0 0 0-1.093-1.094ZM52.348 54.175a63.433 63.433 0 0 0-14-10.675l-1.039 1.925a61.556 61.556 0 0 1 13.847 10.697 9.844 9.844 0 0 1-5.02 1.29 14.952 14.952 0 0 1-7.952-2.548c-6.836-4.287-8.017-14.58-8.071-15.017a1.094 1.094 0 0 1 1.006-1.203c.525 0 12.873-.93 17.904 4.101a12.982 12.982 0 0 1 3.325 11.43ZM66.84 48.367c-2.996 3.817-6.135 4.528-8.06 4.528a6.177 6.177 0 0 1-1.094-.087 47.361 47.361 0 0 1 7.328-11.495l-1.64-1.444a49.601 49.601 0 0 0-7.504 11.615 10.313 10.313 0 0 1-.503-9.318c2.396-5.086 11.725-7.657 12.119-7.82a1.095 1.095 0 0 1 1.356.798c.088.295 1.936 8.225-2.001 13.223Z"
+            />
+            <path
+              fill="#8D1C02"
+              d="m54.798 57.063-1.75 1.312a27.748 27.748 0 0 0-1.892-2.253c.212-.113.413-.245.602-.394.177-.14.307-.33.372-.547 0-.065.11-.426.207-1.006a31.992 31.992 0 0 1 2.461 2.888ZM57.719 52.808a27.37 27.37 0 0 0-.69 1.936l-2.1-.645c.282-.903.61-1.79.985-2.658.15.28.318.55.503.809.134.184.32.321.536.394.251.073.507.127.766.164Z"
+            />
+          </svg>
+          <div>
+            <p>ADAPTOGENS</p>
+            <p>
+              Help the body adapt to stress, balance energy levels, and support
+              overall resilience, improving physical and mental vitality.
+            </p>
+          </div>
+        </div>
+
+        <div class="cloud-right"><img src="images/cloud_right.png" alt="" /></div>
+        <div class="flower-right"><img src="images/flower_right.png" alt="" /></div>
+      </div>
+      <div class="carousel">
+        <!-- basic glide markup: https://glidejs.com/docs/setup/#structure -->
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div>
+                  <div class="image-wrap">
+                    <img
+                      class="carousel-item"
+                      src="images/kincan2.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-1"
+                      src="images/kincan_flowers/1/f1.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-2"
+                      src="images/kincan_flowers/1/f2.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-3"
+                      src="images/kincan_flowers/1/f3.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-4"
+                      src="images/kincan_flowers/1/f4.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-5"
+                      src="images/kincan_flowers/1/f5.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-6"
+                      src="images/kincan_flowers/1/f6.png"
+                      alt=""
+                    />
+                  </div>
+                  <sl-button size="medium" pill>Add Now</sl-button>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div>
+                  <div class="image-wrap">
+                    <img
+                      class="carousel-item"
+                      src="images/KIN_Can.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-1"
+                      src="images/kincan_flowers/2/f1.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-2"
+                      src="images/kincan_flowers/2/f2.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-3"
+                      src="images/kincan_flowers/2/f3.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-4"
+                      src="images/kincan_flowers/2/f4.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-5"
+                      src="images/kincan_flowers/2/f5.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-6"
+                      src="images/kincan_flowers/2/f6.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-7"
+                      src="images/kincan_flowers/2/f7.png"
+                      alt=""
+                    />
+                  </div>
+                  <sl-button size="medium" pill>Add Now</sl-button>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div>
+                  <div class="image-wrap">
+                    <img
+                      class="carousel-item"
+                      src="images/kincan3.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-1"
+                      src="images/kincan_flowers/3/f1.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-2"
+                      src="images/kincan_flowers/3/f2.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-3"
+                      src="images/kincan_flowers/3/f3.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-4"
+                      src="images/kincan_flowers/3/f4.png"
+                      alt=""
+                    />
+                    <img
+                      class="flower flower-5"
+                      src="images/kincan_flowers/3/f5.png"
+                      alt=""
+                    />
+                  </div>
+                  <sl-button size="medium" pill>Add Now</sl-button>
+                </div>
+              </li>
+            </ul>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <img src="images/arrow_left.png" alt="previous" />
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <img src="images/arrow_right.png" alt="next" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="try-our-drinks">
+        <div class="image-text">
+          <img src="images/3drinks.png" alt="3 drinks" />
+          <div class="text">
+            <h2>Try our new mixable drinks</h2>
+            <p>
+              Experience our cutting-edge, mixable, and non-alcoholic drinks
+              that not only taste fantastic but also promote your health and
+              well-being. Elevate your mood and unwind in style – all without
+              the need for alcohol.
+            </p>
+            <sl-button size="medium" pill>ORDER NOW</sl-button>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="review-cards">
+          <sl-card class="card-header">
+            <div slot="header">
+              <div>
+                <img src="images/review1.png" alt="" />
+                Kate
+              </div>
+              <div class="stars">
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+              </div>
+            </div>
+            "This is the greatest drink ever!"
+          </sl-card>
+          <sl-card class="card-header">
+            <div slot="header">
+              <div>
+                <img src="images/review2.png" alt="" />
+                Jane
+              </div>
+              <div class="stars">
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+              </div>
+            </div>
+            "I agree with Kate! So fruity!"
+          </sl-card>
+          <sl-card class="card-header">
+            <div slot="header">
+              <div>
+                <img src="images/review3.png" alt="" />
+                Melissa
+              </div>
+              <div class="stars">
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+              </div>
+            </div>
+            "Beats alcohol anyday."
+          </sl-card>
+          <sl-card class="card-header">
+            <div slot="header">
+              <div>
+                <img src="images/review4.png" alt="" />
+                Genevieve
+              </div>
+              <div class="stars">
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+                <sl-icon name="star-fill"></sl-icon>
+              </div>
+            </div>
+            "Kate still owes me $30. This drink is nice."
+          </sl-card>
+        </div>
+        <h2>Activate the power, energy, and peace that is already in you.</h2>
+      </section>
+      <footer>
+        <img class="footer-image" src="images/footer_can.png" alt="" />
+        <div class="subscribe">
+          <h3>Don't miss out on anything!</h3>
+          <sl-input placeholder="Your email here">email address</sl-input>
+          <sl-button size="medium" pill>SIGN UP</sl-button>
+        </div>
+        <div class="social">
+          <div style="color: white">
+            <sl-icon-button name="instagram"></sl-icon-button>
+          </div>
+          <div style="color: white">
+            <sl-icon-button name="facebook"></sl-icon-button>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- Put your script after the HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+// My Pseudocode A3
+
+Main script for Kin website: (scripts.js)
+
+START
+
+  Register scrollTrigger and scrollTo plugin with GSAP
+  
+  Create a GSAP Timeline, store as tl
+  Create a GSAP match media function, store as mm 
+  
+  Add scrollTrigger animations to tl
+  Add desktop tl animations to the mm function, using desktop breakpoint
+  Add mobile tl animations to the mm function, using mobile breakpoint
+  
+  Initialise the Glide carousel object, store as glide
+  
+  Call the glide.mount function to initialise the carousel
+
+  Get our "shop all" link, store as shopLink
+  Get our "learn" link, store as learnLink
+  Get our "subscribe" link, store as subscribeLink
+  Get our "shopw now" link, store as heroButton
+
+  Call function animatedScrollTo(shopLink, ".shop")
+  Call function animatedScrollTo(learnLink, ".learn")
+  Call function animatedScrollTo(subscribeLink, ".subscribe")
+  Call function animatedScrollTo(heroButton, ".carousel")
+
+  Get glide carousel left arrow, store as buttonLeft
+  Get glide carousel right arrow, store as buttonRight
+
+  Attach click event listener to call canOpeningSound to buttonLeft
+  Attach click event listener to call canOpeningSound to buttonRight
+
+END
+----------------------------
+
+FUNCTIONS:
+
+Function canOpeningSound {
+  Create a new Audio object, store as audio
+  Set the path for the audio file
+  Call audio.play function
+}
+
+  
+Function animatedScrollTo (element, elementToGoTo) {
+  Attach a click event listener to the element
+  Call the preventDefault function on the event
+  Use Gsap.to function to scrollTo the elementToGoTo
+}

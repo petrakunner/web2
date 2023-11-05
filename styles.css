@@ -1,0 +1,878 @@
+/**
+ We have extra media queries for sizes 1200px and 760px which cover tablet and mobiles
+ **/
+
+:root {
+  --primary-color: #8d1c02;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: "Yeseva One", serif;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem; // 1rem = 16px therefore 3rem is 48px
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+body {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+p {
+  font-size: 2rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 100;
+  background: linear-gradient(
+    180deg,
+    #8d1c02 0%,
+    rgba(141, 28, 2, 0.73935) 20.56%,
+    rgba(141, 28, 2, 0.52139) 37.74%,
+    rgba(141, 28, 2, 0) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+main {
+  /* padding-top: 120px; */
+  position: relative;
+
+  overflow-x: hidden; // this prevents the cloud images from causing scrolling horizontal
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/** navigation **/
+.navigation-links .menu,
+.logo,
+.cart_profile {
+  display: flex;
+  color: white;
+}
+
+.navigation-links,
+.cart_profile {
+  width: 280px;
+}
+
+.cart_profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cart_profile .icons {
+  margin-left: auto;
+}
+
+.logo {
+  height: 65px;
+}
+
+.logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.menu {
+  gap: 24px;
+}
+
+.icons {
+  display: flex;
+  gap: 24px;
+}
+
+/** this is the burger menu **/
+.mobile-navigation {
+  display: none;
+  color: white;
+  font-size: 2rem;
+}
+
+sl-menu {
+  background: transparent;
+}
+
+sl-menu-item,
+sl-menu-item a {
+  color: white;
+}
+
+@media screen and (max-width: 760px) {
+  .cart_profile {
+    display: none;
+  }
+
+  /* hide the desktop menu and show the mobile menu */
+  .navigation-links {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: block;
+  }
+}
+
+/** intro section **/
+.intro {
+  height: 100vh;
+  position: relative;
+}
+
+.intro-bg {
+  background-image: url("/images/intro_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+}
+
+.kin-can {
+  position: fixed;
+  z-index: 100;
+  /** center the can in middle of screen 
+   * https://stackoverflow.com/a/23384995
+   * we will use this technique css to center other parts too
+   **/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kin-can img {
+  max-width: 215px;
+}
+
+.kin-can-mobile {
+  display: none;
+  max-width: 215px;
+}
+
+.kin-can-mobile img {
+  width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .kin-can {
+    display: none;
+  }
+
+  .kin-can-mobile {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.intro .cta {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .intro .cta {
+    left: 5%;
+    bottom: 5%;
+  }
+}
+
+.description {
+  position: relative;
+  height: 100vh;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+}
+
+.background-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 177, 159, 0.3864) 0%,
+    rgba(255, 177, 159, 0.92) 37.5%,
+    rgba(255, 177, 159, 0.828) 62.5%,
+    rgba(245, 172, 203, 0.92) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+}
+
+.description-left,
+.description-right {
+  position: absolute;
+  top: 50%;
+  max-width: 520px;
+}
+
+.description-left p,
+.description-right p {
+  font-size: 1.5rem;
+}
+
+.description-left {
+  top: 20%;
+  left: 5vw;
+}
+
+.description-right {
+  right: 5vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .description {
+    height: auto;
+    padding-top: 32px;
+  }
+  .description-left,
+  .description-right {
+    position: static;
+  }
+}
+
+.button {
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: white;
+  color: var(--primary-color);
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.button:hover {
+  background: var(--primary-color);
+  color: white;
+  border: 1px solid white;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.information {
+  height: 100vh;
+  position: relative;
+}
+
+.information p {
+  font-size: 1.2rem;
+}
+
+.center-shape {
+  position: absolute;
+  width: 452px;
+  height: 566px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: bottom;
+  background: linear-gradient(180deg, #f5f5f5 0%, rgba(245, 245, 245, 0) 100%);
+  opacity: 0.2;
+}
+
+.cloud-left,
+.flower-left,
+.cloud-right,
+.flower-right {
+  position: absolute;
+}
+
+.cloud-left,
+.flower-left {
+  left: 0;
+  top: 0;
+}
+
+.flower-left {
+  top: 22%;
+  opacity: 0;
+  scale: 0;
+  transform-origin: left; // this will make our flower scale from the left instead of from the center
+}
+
+.cloud-right,
+.flower-right {
+  right: 0;
+  top: 35%;
+  transform-origin: right;
+}
+
+.cloud-left {
+  transform-origin: left;
+  left: -12%;
+}
+
+@media screen and (max-width: 1200px) {
+  .cloud-left {
+    left: -15%;
+  }
+}
+
+.cloud-right {
+  z-index: 1;
+  right: -8%;
+}
+
+.flower-right {
+  right: 9%;
+  top: 39%;
+  scale: 0;
+}
+
+/** information ingredients section **/
+.botanicals,
+.nootropics,
+.adaptogens {
+  position: absolute;
+  max-width: 430px;
+  text-align: center;
+  opacity: 0;
+}
+
+.botanicals {
+  left: 10%;
+  bottom: 15%;
+}
+
+.nootropics {
+  right: 12%;
+  top: 12%;
+}
+
+.adaptogens {
+  right: 15%;
+  bottom: 5%;
+}
+/** svg animation for our circles **/
+.botanicals circle,
+.adaptogens circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+@media screen and (max-width: 760px) {
+  .center-shape {
+    display: none;
+  }
+  .information {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    height: auto;
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .information .botanicals,
+  .information .nootropics,
+  .information .adaptogens {
+    position: relative;
+    /** how to undo the top left bottom right values: https://stackoverflow.com/a/26738184 **/
+    top: unset;
+    right: unset;
+    left: unset;
+    bottom: unset;
+    z-index: 1;
+  }
+
+  .information .nootropics,
+  .information .adaptogens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
+
+  .cloud-right,
+  .cloud-left {
+    z-index: 0;
+    scale: 0.5;
+  }
+
+  .flower-left,
+  .flower-right {
+    display: none;
+  }
+
+  .botanicals circle,
+  .adaptogens circle {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+/** carousel section styles **/
+.carousel {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glide {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.glide__slide > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 630px;
+}
+
+.glide__slide sl-button {
+  margin-top: 12px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+@media screen and (max-width: 760px) {
+  .carousel {
+    padding-top: 64px;
+    height: auto;
+    padding-bottom: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+sl-button::part(base) {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.glide__slide > div::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 170px 170px 0px 0px;
+}
+
+.glide__slide--active sl-button {
+  opacity: 1;
+}
+.glide__slide--active .carousel-item {
+  transform: translate3d(0, -15px, 0);
+  scale: 1;
+}
+
+.carousel-item {
+  scale: 0.8;
+  transition: transform 0.3s ease, scale 0.3s ease;
+  will-change: transform, scale;
+  z-index: 2;
+  height: 380px;
+  object-fit: contain;
+  max-width: 215px;
+  position: relative;
+}
+
+.glide__arrow--left {
+  left: -2em;
+}
+.glide__arrow--right {
+  right: -2em;
+}
+.glide__arrow {
+  border: none;
+  box-shadow: none;
+}
+
+/** for each can that is active, we animate the flowers out **/
+.glide__slide .image-wrap {
+  position: relative;
+}
+.glide__slide .flower {
+  position: absolute;
+  transform-origin: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 1;
+}
+
+@media screen and (max-width: 760px) {
+  .carousel {
+    padding-top: 64px;
+    height: auto;
+    padding-bottom: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .glide__slide > div::before {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .glide__slide > div {
+    height: 460px;
+  }
+
+  .carousel-item {
+    height: 260px;
+  }
+
+  .flower {
+    max-height: 120px;
+  }
+
+  .glide__slides,
+  .glide__track {
+    overflow: visible;
+  }
+}
+
+// for each flower from 1 to 7, we will animate it out from behind the can.
+// the initial position should also be a bit scattered around the bottom and behind the can
+// the animation should occur when the .glide__slide is .glide__slide--active
+
+/** I  have a bug here where the first selector just simply doesnt work. I have no idea why. **/
+/** if I add a second one it does work.. only an issue with the .flower-1 class. **/
+.glide__slide--active .flower-1 {
+  animation: flower-1 0.5s ease forwards;
+}
+
+.glide__slide--active .flower-1 {
+  animation: flower-1 0.5s ease forwards;
+}
+
+.glide__slide--active .flower-2 {
+  animation: flower-2 0.5s ease forwards;
+}
+
+.glide__slide--active .flower-3 {
+  animation: flower-3 0.5s ease forwards;
+}
+
+.glide__slide--active .flower-4 {
+  animation: flower-4 0.5s ease forwards;
+}
+
+.glide__slide--active .flower-5 {
+  animation: flower-5 0.5s ease forwards;
+}
+
+.glide__slide--active .flower-6 {
+  animation: flower-6 0.5s ease forwards;
+}
+
+.glide__slide--active .flower-7 {
+  animation: flower-7 0.5s ease forwards;
+}
+
+/** by applying a different animation to each flower, we can make them all move in different directions for a cool effect **/
+@keyframes flower-1 {
+  0% {
+    transform: translate(-50%, 0%) scale(0.5);
+  }
+  100% {
+    transform: translate(-135%, -175%) scale(1);
+  }
+}
+
+@keyframes flower-2 {
+  0% {
+    transform: translate(-50%, 0%) scale(0.5);
+  }
+  100% {
+    transform: translate(80%, -20%) scale(1);
+  }
+}
+
+@keyframes flower-3 {
+  0% {
+    transform: translate(-50%, 0%) scale(0.5);
+  }
+  100% {
+    transform: translate(-140%, -80%) scale(1);
+  }
+}
+
+@keyframes flower-4 {
+  0% {
+    transform: translate(-50%, 0%) scale(0.5);
+  }
+  100% {
+    transform: translate(50%, -140%) scale(1);
+  }
+}
+
+@keyframes flower-5 {
+  0% {
+    transform: translate(-50%, 0%) scale(0.5);
+  }
+  100% {
+    transform: translate(35%, -120%) scale(1);
+  }
+}
+
+@keyframes flower-6 {
+  0% {
+    transform: translate(-50%, 0%) scale(0.5);
+  }
+  100% {
+    transform: translate(-100%, -250%) scale(1);
+  }
+}
+
+@keyframes flower-7 {
+  0% {
+    transform: translate(-50%, 0%) scale(0.5);
+  }
+  100% {
+    transform: translate(-150%, 20%) scale(1);
+  }
+}
+
+/** try our drinks section **/
+.try-our-drinks {
+  min-height: 60vh;
+  padding: 64px;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.try-our-drinks .image-text {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.try-our-drinks .image-text img {
+  max-width: 560px;
+  height: 520px;
+  object-fit: contain;
+}
+
+.try-our-drinks .text {
+  text-align: center;
+}
+.try-our-drinks .text p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.try-our-drinks .text h2 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .try-our-drinks {
+    height: auto;
+    padding: 32px;
+  }
+
+  .try-our-drinks .image-text {
+    display: block;
+  }
+}
+/** reviews section **/
+.reviews {
+  padding: 64px;
+}
+
+.reviews h2 {
+  font-size: 3rem;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.reviews .review-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+  .reviews .review-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .reviews .review-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews {
+    padding: 32px;
+  }
+
+  .reviews h2 {
+    padding-bottom: 20px;
+  }
+}
+
+sl-card::part(base) {
+  background: linear-gradient(
+    rgb(255, 255, 255) 0%,
+    rgb(255 157 207 / 26%) 100%
+  );
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 20px;
+  min-height: 200px;
+}
+
+sl-card::part(body) {
+  font-size: 1.25rem;
+  font-family: "Yeseva One", serif;
+  text-align: center;
+}
+
+sl-card::part(header) {
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+sl-card .card__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+sl-card [slot="header"] {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  padding-top: 120px;
+}
+
+footer .social {
+  border-top: 2px solid white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px;
+}
+
+footer .footer-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer .subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+footer h3 {
+  color: var(--primary-color);
+}
+footer sl-input {
+  background: none;
+  border-radius: 0;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+}
+
+sl-input::part(base) {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 0;
+}
+
+@media screen and (max-width: 760px) {
+  footer {
+    padding-top: 80px;
+  }
+
+  footer .footer-image {
+    width: 240px;
+  }
+}
+
+sl-icon-button {
+  z-index: 1;
+}
+
+/** https://shoelace.style/components/icon-button#colors **/
+sl-icon-button::part(base) {
+  color: white;
+}
+
+sl-icon-button::part(base):hover,
+sl-icon-button::part(base):focus {
+  color: #c913aa;
+}
